@@ -15,6 +15,10 @@ An Electron application with React and TypeScript
 
 ## Project Setup
 
+### Manual de Usuario
+https://docs.google.com/document/d/1rCGkkvDZ3ZG4g8AnHF7d-MLvvIBe5Yl67lu5uMe31SE/edit?usp=drive_link
+
+
 ### Install
 
 ```bash
