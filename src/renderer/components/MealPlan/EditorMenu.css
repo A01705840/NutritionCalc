@@ -1,0 +1,469 @@
+/* ---------- Menu editor ---------- */
+
+.menu-editor {
+  font-family: Inter, system-ui, sans-serif;
+  margin-top: 32px;
+  color: #101828;
+}
+
+.menu-editor__barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  border-bottom: 1px solid #d0d5dd;
+}
+
+.menu-editor__mensaje {
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 13px;
+  background: #ecfdf3;
+  border: 1px solid #abefc6;
+  border-radius: 6px;
+  white-space: pre-line;
+}
+
+.menu-editor__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 16px 0;
+  font-size: 13px;
+  color: #475467;
+}
+
+.menu-chip {
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--tint);
+  color: var(--accent);
+}
+
+/* ---------- Tabs ---------- */
+
+.menu-tabs {
+  display: flex;
+  gap: 4px;
+}
+
+.menu-tabs__tab {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  color: #475467;
+}
+
+.menu-tabs__tab--activa {
+  color: #1d5fa8;
+  border-bottom-color: #1d5fa8;
+}
+
+.menu-tabs__tab:focus-visible {
+  outline: 2px solid #1d5fa8;
+}
+
+.menu-tabs__hora {
+  font-size: 12px;
+  font-weight: 400;
+  color: #667085;
+}
+
+.menu-tabs__conteo {
+  min-width: 18px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  font-size: 11px;
+  text-align: center;
+  background: #ecfdf3;
+  color: #067647;
+}
+
+.menu-tabs__conteo--pendiente {
+  background: #fef3f2;
+  color: #d92d20;
+}
+
+/* ---------- Option card ---------- */
+
+.menu-opcion {
+  border: 1px solid #d0d5dd;
+  border-left: 4px solid #12b76a;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+}
+
+.menu-opcion--pendiente {
+  border-left-color: #f79009;
+}
+
+.menu-opcion__encabezado {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.menu-opcion__numero {
+  font-weight: 700;
+}
+
+.menu-opcion__titulo {
+  flex: 1;
+  padding: 6px 8px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+}
+
+.menu-opcion__cuerpo {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(260px, 2fr);
+  gap: 20px;
+}
+
+.menu-opcion__nota {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+  padding: 6px 8px;
+  font: inherit;
+  font-size: 13px;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+/* ---------- Ingredient row ---------- */
+
+.menu-ingrediente {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) 64px minmax(0, 1.6fr) 28px;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.menu-ingrediente__alimento,
+.menu-ingrediente__eq {
+  padding: 5px 6px;
+  font-size: 13px;
+  border: 1px solid #98a2b3;
+  border-radius: 6px;
+}
+
+.menu-ingrediente__eq {
+  text-align: center;
+}
+
+.menu-ingrediente__eq--error {
+  border-color: #d92d20;
+}
+
+.menu-ingrediente__texto {
+  font-size: 13px;
+  color: #344054;
+}
+
+/* ---------- Validation + preview ---------- */
+
+.menu-validacion {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.menu-validacion__fila {
+  display: grid;
+  grid-template-columns: 1fr auto 80px;
+  gap: 8px;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  background: var(--tint);
+}
+
+.menu-validacion__grupo {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.menu-vista {
+  padding: 10px 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  background: #f9fafb;
+  border: 1px dashed #d0d5dd;
+  border-radius: 6px;
+}
+
+.menu-vista__titulo {
+  font-weight: 700;
+}
+
+.menu-vista__nota {
+  font-style: italic;
+  color: #475467;
+}
+
+/* ---------- Buttons ---------- */
+
+.menu-boton {
+  padding: 6px 12px;
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #fff;
+  color: #344054;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.menu-boton:hover {
+  background: #f9fafb;
+}
+
+.menu-boton--primario {
+  margin-bottom: 8px;
+  background: #1d5fa8;
+  border-color: #1d5fa8;
+  color: #fff;
+}
+
+.menu-boton--primario:hover {
+  background: #174d89;
+}
+
+.menu-boton--peligro {
+  margin-top: 0;
+  color: #b42318;
+}
+
+.menu-boton--icono {
+  margin-top: 0;
+  padding: 2px 0;
+  width: 28px;
+}
+
+.menu-boton:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.menu-boton--compacto {
+  margin-top: 0;
+}
+
+.menu-editor__acciones {
+  display: flex;
+  gap: 8px;
+}
+
+/* ---------- Mis comidas (recetario) ---------- */
+
+.menu-recetario {
+  margin-top: 16px;
+  padding: 16px;
+  background: #f9fafb;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+}
+
+.menu-recetario__encabezado {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.menu-recetario__encabezado > div {
+  flex: 1;
+}
+
+.menu-recetario__titulo {
+  margin: 0;
+  font-size: 16px;
+}
+
+.menu-recetario__ayuda {
+  font-size: 13px;
+  color: #667085;
+}
+
+.menu-recetario__editor {
+  background: #fff;
+  border-left-color: #1d5fa8;
+}
+
+.menu-recetario__lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.menu-receta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px;
+  background: #fff;
+  border: 1px solid #d0d5dd;
+  border-top: 4px solid #f79009;
+  border-radius: 8px;
+}
+
+.menu-receta--cuadra {
+  border-top-color: #12b76a;
+}
+
+.menu-receta__titulo {
+  font-weight: 700;
+}
+
+.menu-receta__estado {
+  font-size: 12px;
+  font-weight: 600;
+  color: #b54708;
+}
+
+.menu-receta--cuadra .menu-receta__estado {
+  color: #067647;
+}
+
+.menu-receta__lineas {
+  flex: 1;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.menu-receta__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.menu-chip--fuera {
+  outline: 1px solid #d92d20;
+}
+
+.menu-receta__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.menu-receta__acciones .menu-boton--primario {
+  margin-bottom: 0;
+}
+
+/* ---------- Etiquetas (desayuno, comida, cena, colación) ---------- */
+
+.menu-recetario__campo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.menu-etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.menu-etiqueta {
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #fff;
+  color: #475467;
+  border: 1px solid #d0d5dd;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.menu-etiqueta--activa,
+.menu-etiqueta--fija {
+  background: #e8f1fd;
+  color: #1d5fa8;
+  border-color: #b2ccef;
+}
+
+.menu-etiqueta--fija {
+  cursor: default;
+  font-size: 11px;
+  padding: 1px 8px;
+}
+
+.menu-editor__ajustar {
+  margin-left: auto;
+}
+
+.menu-editor__exportar {
+  display: flex;
+  gap: 8px;
+}
+
+/* ---------- Mis alimentos ---------- */
+
+.menu-alimento__campos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.menu-alimento__campos label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #475467;
+}
+
+.menu-alimento__campos input,
+.menu-alimento__campos select {
+  padding: 5px 6px;
+  font-size: 13px;
+  border: 1px solid #98a2b3;
+  border-radius: 6px;
+}
+
+.menu-alimento__campos input {
+  width: 80px;
+}
+
+.menu-alimento__lista {
+  display: grid;
+  gap: 6px;
+}
+
+.menu-alimento {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: #fff;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+}
+
+.menu-alimento__nombre {
+  font-weight: 600;
+}

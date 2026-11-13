@@ -1,0 +1,185 @@
+/* ---------- Meal plan table ---------- */
+
+.meal-table {
+  border-collapse: collapse;
+  font-family: Inter, system-ui, sans-serif;
+  border: 1px solid #d0d5dd;
+}
+
+/* Header cells. Each food-group header receives --tint and --accent
+   from the component, so the colors stay defined in GROUPS. */
+.meal-table__header {
+  padding: 14px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  width: 128px;
+  border-bottom: 2px solid var(--accent, #d0d5dd);
+  border-right: 1px solid #e4e7ec;
+  background: var(--tint, #f2f4f7);
+  color: var(--accent, #344054);
+}
+
+/* First column: "Grupo de alimentos", "Raciones / día" and meal names */
+.meal-table__label {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  width: 210px;
+  border-right: 1px solid #e4e7ec;
+  border-bottom: 1px solid #e4e7ec;
+  color: #101828;
+}
+
+.meal-table__time {
+  font-size: 12px;
+  font-weight: 400;
+  color: #667085;
+  margin-top: 2px;
+}
+
+.meal-table__cell {
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  border-right: 1px solid #e4e7ec;
+  border-bottom: 1px solid #e4e7ec;
+  height: 56px;
+}
+
+/* ---------- Totals row ---------- */
+
+.meal-table__totals-row {
+  background: #f9fafb;
+}
+
+.meal-table__total {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent, #101828);
+}
+
+.meal-table__status {
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.meal-table__status--ok {
+  color: #067647;
+}
+
+.meal-table__status--missing {
+  color: #b54708;
+}
+
+.meal-table__status--over {
+  color: #d92d20;
+}
+
+/* ---------- Editable cell ---------- */
+
+.meal-table__cell-button {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: 100%;
+  min-height: 56px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.meal-table__cell-button:hover {
+  background: #f9fafb;
+}
+
+.meal-table__cell-button:focus-visible {
+  outline: 2px solid #1d5fa8;
+  outline-offset: -2px;
+}
+
+.meal-table__value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #101828;
+}
+
+.meal-table__note {
+  font-size: 11px;
+  color: #667085;
+  line-height: 1.3;
+}
+
+.meal-table__input {
+  width: 90px;
+  margin: 6px auto 0;
+  display: block;
+  padding: 4px 6px;
+  font-size: 15px;
+  text-align: center;
+  border: 1px solid #98a2b3;
+  border-radius: 6px;
+}
+
+.meal-table__input--note {
+  font-size: 11px;
+  margin-bottom: 6px;
+}
+
+.meal-table__input--error {
+  border-color: #d92d20;
+}
+
+.meal-table__error {
+  font-size: 10px;
+  color: #d92d20;
+  margin-bottom: 4px;
+}
+
+.meal-table__meta-button {
+  all: unset;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent, #101828);
+  padding: 0 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.meal-table__meta-button:hover {
+  outline: 1px dashed var(--accent, #98a2b3);
+}
+
+.meal-table__meta-button:focus-visible {
+  outline: 2px solid #1d5fa8;
+}
+
+.meal-table__hora-button {
+  all: unset;
+  display: inline-block;
+  padding: 0 4px;
+  margin-left: -4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.meal-table__hora-button:hover {
+  outline: 1px dashed #98a2b3;
+}
+
+.meal-table__hora-button:focus-visible {
+  outline: 2px solid #1d5fa8;
+}
+
+.meal-table__input--hora {
+  width: 120px;
+  margin: 4px 0 0;
+  font-size: 12px;
+  text-align: left;
+}

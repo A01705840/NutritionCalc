@@ -1,0 +1,70 @@
+/* ---------- Barra de sesión y plantilla ---------- */
+
+.sesion {
+  font-family: Inter, system-ui, sans-serif;
+  margin-bottom: 16px;
+}
+
+.sesion__barra {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  background: #f9fafb;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+}
+
+.sesion__grupo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sesion__etiqueta {
+  margin-right: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #667085;
+}
+
+.sesion .menu-boton--primario {
+  margin-bottom: 0;
+}
+
+.sesion__mensaje {
+  position: relative;
+  margin-top: 8px;
+  padding: 8px 32px 8px 12px;
+  font-size: 13px;
+  white-space: pre-line;
+  background: #ecfdf3;
+  border: 1px solid #abefc6;
+  border-radius: 6px;
+}
+
+.sesion__mensaje--error {
+  background: #fef3f2;
+  border-color: #fecdca;
+  color: #b42318;
+}
+
+.sesion__cerrar {
+  all: unset;
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #667085;
+}
+
+.sesion__pendiente {
+  margin-left: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #b54708;
+}

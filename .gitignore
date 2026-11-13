@@ -1,0 +1,34 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+dist-win81
+out
+*.tsbuildinfo
+
+# Patient sessions and exported menus
+SESIONES/
+
+# Reference documents at the project root (resources/plantilla-menu.docx is still tracked)
+/*.docx
+/*.pdf
+/*.xlsx
+
+# Office lock files
+~$*
+
+# Logs and caches
+*.log*
+.eslintcache
+
+# Environment files
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+_old/
